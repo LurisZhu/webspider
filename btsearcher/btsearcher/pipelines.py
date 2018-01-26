@@ -8,4 +8,6 @@
 
 class BtsearcherPipeline(object):
     def process_item(self, item, spider):
-        return item
+        pass
+        with open("./result.txt",'a') as fp:
+            fp.write(item["name"]+ '\t\t\t'+ item["addr"]+'\n')
